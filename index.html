@@ -1,0 +1,82 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+</head>
+<body>
+        <div class="slider owl-carousel owl-theme">
+            <div class="item">
+                <a href="">
+                    <img src="//theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=28822" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="//theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=28822" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="//theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=28822" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="slider owl-carousel2 owl-theme">
+            <div class="item">
+                <a href="">
+                    <img src="//theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=28822" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="//theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=28822" alt="">
+                </a>
+            </div>
+            <div class="item">
+                <a href="">
+                    <img src="//theme.hstatic.net/1000026716/1000440777/14/slideshow_1.jpg?v=28822" alt="">
+                </a>
+            </div>
+        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        $(".owl-carousel").owlCarousel();
+        });
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        })
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items:4,
+            loop:true,
+            margin:10,
+            autoplay:true,
+            autoplayTimeout:1000,
+            autoplayHoverPause:true
+        });
+        $('.play').on('click',function(){
+            owl.trigger('play.owl.autoplay',[1000])
+        })
+    </script>
+</body>
+</html>
